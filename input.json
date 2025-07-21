@@ -1,0 +1,17 @@
+{
+  "name": "John Doe",
+  "origin": "New York",
+  "destination": "Paris",
+  "start_date": "2025-08-01",
+  "end_date": "2025-08-05",
+  "days": [
+    {
+      "date": "2025-08-01",
+      "activities": ["Visit Eiffel Tower", "Walk along the Seine"]
+    },
+    {
+      "date": "2025-08-02",
+      "activities": ["Louvre Museum", "Notre-Dame Cathedral"]
+    }
+  ]
+}

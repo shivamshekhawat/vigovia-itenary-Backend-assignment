@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  itinerary-api:
+    build: .
+    container_name: go-itinerary-api
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./pdfs:/root/pdfs
+    environment:
+      - PORT=8080
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "wget", "--quiet", "--tries=1", "--spider", "http://localhost:8080/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 10s
